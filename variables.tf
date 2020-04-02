@@ -3,6 +3,11 @@ variable "domain" {
   type        = string
 }
 
+variable "certificate" {
+  description = "ARN of certificate (ACM)"
+  type        = string
+}
+
 variable "index" {
   description = "The name of website index files"
   type        = string

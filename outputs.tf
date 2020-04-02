@@ -1,8 +1,3 @@
-output "cert_arn" {
-  description = "The domain ARN"
-  value       = module.certificate.arn
-}
-
 output "cdn_id" {
   description = "The cloudfront distribution id"
   value       = module.cloudfront.cdn_id

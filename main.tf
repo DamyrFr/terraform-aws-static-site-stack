@@ -6,18 +6,12 @@ module "s3" {
   error = var.error
 }
 
-module "certificate" {
-  source = "./modules/certificate"
-
-  domain = var.domain
-}
-
 module "cloudfront" {
   source = "./modules/cloudfront"
 
   bucket_id     = module.s3.bucket_id
   bucket_domain = module.s3.bucket_domain_name
-  certificate   = module.certificate.arn
+  certificate   = var.certificate
   domain        = var.domain
   index         = var.index
   error         = var.error
