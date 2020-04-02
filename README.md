@@ -2,7 +2,7 @@
 
 Simple module to deploy a S3 and Cloudfront stack on AWS.
 
-![AWS SCHEMA](AWS-modules.png)
+![AWS SCHEMA](./AWS-modules.png)
 
 This module was originally design for this article (in French) : [link](https://www.damyr.fr/posts/premier-module-terraform/)
 
