@@ -9,6 +9,6 @@ output "cdn_arn" {
 }
 
 output "cdn_domain" {
-	description = "AWS domain for cloudfront"
-	value		= aws_cloudfront_distribution.this.domain_name
+  description = "AWS domain for cloudfront"
+  value       = aws_cloudfront_distribution.this.domain_name
 }

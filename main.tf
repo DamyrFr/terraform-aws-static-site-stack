@@ -26,6 +26,6 @@ module "cloudfront" {
 module "redirect" {
   source = "./modules/redirect"
 
-  domain   = var.domain
+  domain = var.domain
   enable = var.https_redirect
 }

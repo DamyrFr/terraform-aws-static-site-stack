@@ -16,7 +16,7 @@ variable "bucket_domain" {
 variable "http_ver" {
   description = "HTTP version for Cloudfront distribution"
   type        = string
-	default			= "http2"
+  default     = "http2"
 }
 
 variable "certificate" {

@@ -10,4 +10,3 @@ resource "aws_acm_certificate" "this" {
     create_before_destroy = true
   }
 }
-

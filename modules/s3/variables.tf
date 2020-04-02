@@ -15,4 +15,3 @@ variable "error" {
   type        = string
   default     = "error.html"
 }
-
