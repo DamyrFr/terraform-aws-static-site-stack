@@ -11,9 +11,14 @@ resource "aws_cloudfront_distribution" "this" {
     origin_id   = var.bucket_id
   }
 
+  logging_config {
+    include_cookies = false
+    bucket          = aws_s3_bucket.logs.bucket_domain_name
+  }
+
   enabled             = true
   default_root_object = var.index
-  aliases             = [var.domain]
+  aliases             = [var.domain, "www.${var.domain}"]
 
   custom_error_response {
     error_code         = 404
@@ -36,7 +41,7 @@ resource "aws_cloudfront_distribution" "this" {
       }
     }
 
-    viewer_protocol_policy = "allow-all"
+    viewer_protocol_policy = "redirect-to-https"
     min_ttl                = var.ttl_min
     default_ttl            = var.ttl_def
     max_ttl                = var.ttl_max
@@ -58,5 +63,33 @@ resource "aws_cloudfront_distribution" "this" {
 
   tags = {
     project = var.domain
+  }
+}
+
+data "aws_route53_zone" "this" {
+  name = var.domain
+}
+
+resource "aws_route53_record" "root_domain" {
+  zone_id = data.aws_route53_zone.this.zone_id
+  name    = var.domain
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.this.domain_name
+    zone_id                = aws_cloudfront_distribution.this.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+resource "aws_route53_record" "www_domain" {
+  zone_id = data.aws_route53_zone.this.zone_id
+  name    = "www.${var.domain}"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.this.domain_name
+    zone_id                = aws_cloudfront_distribution.this.hosted_zone_id
+    evaluate_target_health = false
   }
 }

@@ -22,6 +22,7 @@ No requirements.
 | error | The name of website error files | `string` | `"error.html"` | no |
 | http\_ver | HTTP version for Cloudfront distribution | `string` | `"http2"` | no |
 | index | The name of website index files | `string` | `"index.html"` | no |
+| logs\_retention | Number of days for logs retention | `number` | `31` | no |
 | ttl\_def | Default ttl | `number` | `3600` | no |
 | ttl\_max | Maximum ttl | `number` | `86400` | no |
 | ttl\_min | Minimal ttl | `number` | `0` | no |

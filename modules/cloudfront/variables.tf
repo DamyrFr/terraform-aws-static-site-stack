@@ -53,3 +53,9 @@ variable "ttl_max" {
   type        = number
   default     = 86400
 }
+
+variable "logs_retention" {
+  description = "Number of days for logs retention"
+  type        = number
+  default     = 31
+}
