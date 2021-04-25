@@ -1,9 +1,3 @@
-module "dns" {
-  source = "./modules/dns"
-
-  domain = var.domain
-}
-
 module "s3" {
   source = "./modules/s3"
 
