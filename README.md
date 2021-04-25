@@ -1,4 +1,4 @@
-# Terraform for create a static website
+# Terraform for setup a static website
 
 Simple module to deploy a static hosting stack (witch access logs and user for deployment).
 
@@ -7,7 +7,6 @@ This stack is composed by there services :
 * `Cloudfront` : used as front entry point CDN
 * `S3` : for two founction, static asset hosting and Cloudfront access logs
 * `ACM` : create certificate for the website
-* `Route53` : for the DNS management
 * `IAM` : Create IAM user with rigths for deployment (update S3 assets and invalid cache)
 
 Each of services has a modules on `./modules`.
@@ -46,6 +45,7 @@ No provider.
 | ttl\_def | Default ttl | `number` | `3600` | no |
 | ttl\_max | Maximum ttl | `number` | `86400` | no |
 | ttl\_min | Minimal ttl | `number` | `0` | no |
+| zone\_id | The ID for DNS zone | `string` | n/a | yes |
 
 ## Outputs
 

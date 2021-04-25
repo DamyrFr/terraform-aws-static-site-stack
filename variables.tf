@@ -15,6 +15,11 @@ variable "error" {
   default     = "error.html"
 }
 
+variable "zone_id" {
+  description = "The ID for DNS zone"
+  type        = string
+}
+
 variable "logs_retention" {
   description = "Number of days for logs retention"
   type        = number

@@ -15,7 +15,7 @@ module "s3" {
 module "acm" {
   source = "./modules/acm"
 
-  zone_id = module.dns.zone_id
+  zone_id = var.zone_id
   domain  = var.domain
 }
 
