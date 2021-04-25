@@ -23,6 +23,7 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
+| bucket\_arn | The arn of S3 bucket |
 | bucket\_domain\_name | The full domain for S3 |
 | bucket\_id | The id of S3 bucket |
 
