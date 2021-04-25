@@ -1,4 +1,6 @@
+# Local module : Cloudfront
 
+Deploy a Cloudfront distribution for resolve : www.yourdomain and yourdomain with Route53 site. And a S3 bucket for access logs storage, there are deleted after a number of day (can be set by variable).
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

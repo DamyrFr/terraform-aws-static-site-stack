@@ -1,4 +1,6 @@
+# Local module : S3
 
+Module used to create a public S3 hosting, used as backend by Cloudfront.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

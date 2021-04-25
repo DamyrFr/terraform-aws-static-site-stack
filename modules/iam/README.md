@@ -1,4 +1,9 @@
+# Local module : IAM
 
+This module deploy a deployement user and tow roles for there actions :
+
+* Push files (web assets) on S3 bucket
+* Invalid cache on CDN (Cloudfront)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
