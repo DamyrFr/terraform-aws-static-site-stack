@@ -1,5 +1,5 @@
 resource "aws_iam_user" "cd" {
-  name = "deployment"
+  name = "deployment-${var.domain}"
   path = "/"
 
   tags = {
