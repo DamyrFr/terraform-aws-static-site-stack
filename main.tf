@@ -22,12 +22,16 @@ module "acm" {
 module "cloudfront" {
   source = "./modules/cloudfront"
 
-  bucket_id     = module.s3.bucket_id
-  bucket_domain = module.s3.bucket_domain_name
-  certificate   = module.acm.certificate_arn
-  domain        = var.domain
-  index         = var.index
-  error         = var.error
+  bucket_id      = module.s3.bucket_id
+  bucket_domain  = module.s3.bucket_domain_name
+  certificate    = module.acm.certificate_arn
+  logs_retention = var.logs_retention
+  ttl_min        = var.ttl_min
+  ttl_max        = var.ttl_max
+  ttl_def        = var.ttl_def
+  domain         = var.domain
+  index          = var.index
+  error          = var.error
 }
 
 module "iam" {

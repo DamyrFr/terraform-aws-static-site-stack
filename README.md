@@ -20,7 +20,7 @@ This module was originally design for this article (in French) : [link](https://
 
 ```hcl
 module "site" {
-  source  = "terraform-aws-statc-stack/static/aws"
+  source  = "DamyrFr/static-site-stack/aws"
   version = "2.0.0"
 	domain  = "yourdomain"
 }
@@ -33,7 +33,7 @@ No requirements.
 
 ## Providers
 
-AWS
+No provider.
 
 ## Inputs
 
@@ -42,6 +42,10 @@ AWS
 | domain | The domain of static website | `string` | n/a | yes |
 | error | The name of website error files | `string` | `"error.html"` | no |
 | index | The name of website index files | `string` | `"index.html"` | no |
+| logs\_retention | Number of days for logs retention | `number` | `31` | no |
+| ttl\_def | Default ttl | `number` | `3600` | no |
+| ttl\_max | Maximum ttl | `number` | `86400` | no |
+| ttl\_min | Minimal ttl | `number` | `0` | no |
 
 ## Outputs
 

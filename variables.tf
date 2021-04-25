@@ -14,3 +14,27 @@ variable "error" {
   type        = string
   default     = "error.html"
 }
+
+variable "logs_retention" {
+  description = "Number of days for logs retention"
+  type        = number
+  default     = 31
+}
+
+variable "ttl_min" {
+  description = "Minimal ttl"
+  type        = number
+  default     = 0
+}
+
+variable "ttl_def" {
+  description = "Default ttl"
+  type        = number
+  default     = 3600
+}
+
+variable "ttl_max" {
+  description = "Maximum ttl"
+  type        = number
+  default     = 86400
+}
