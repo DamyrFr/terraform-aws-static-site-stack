@@ -7,7 +7,7 @@ resource "aws_cloudfront_distribution" "this" {
       origin_protocol_policy = "http-only"
       origin_ssl_protocols   = ["TLSv1.2"]
     }
-    domain_name = var.bucket_domain
+    domain_name = "${var.domain}.s3-website-eu-west-1.amazonaws.com"
     origin_id   = var.bucket_id
   }
 
@@ -57,7 +57,7 @@ resource "aws_cloudfront_distribution" "this" {
 
   viewer_certificate {
     acm_certificate_arn      = var.certificate
-    minimum_protocol_version = "TLSv1.2_2018"
+    minimum_protocol_version = "TLSv1.2_2019"
     ssl_support_method       = "sni-only"
   }
 
