@@ -12,19 +12,19 @@ This stack is composed by there services :
 
 Each of services has a modules on `./modules`.
 
+![AWS SCHEMA](./AWS-modules.png)
+
+This module was originally design for this article (in French) : [link](https://www.damyr.fr/posts/premier-module-terraform/)
+
 ## Exemple
 
 ```hcl
 module "site" {
-  source  = "terraform-aws-static-stack/vpc/aws"
+  source  = "terraform-aws-statc-stack/static/aws"
   version = "2.0.0"
 	domain  = "yourdomain"
 }
 ```
-
-![AWS SCHEMA](./AWS-modules.png)
-
-This module was originally design for this article (in French) : [link](https://www.damyr.fr/posts/premier-module-terraform/)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
