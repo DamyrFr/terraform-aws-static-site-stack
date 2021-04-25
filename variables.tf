@@ -3,11 +3,6 @@ variable "domain" {
   type        = string
 }
 
-variable "certificate" {
-  description = "ARN of certificate (ACM)"
-  type        = string
-}
-
 variable "index" {
   description = "The name of website index files"
   type        = string
@@ -18,10 +13,4 @@ variable "error" {
   description = "The name of website error files"
   type        = string
   default     = "error.html"
-}
-
-variable "https_redirect" {
-  description = "Select if the site is redirect to https"
-  type        = bool
-  default     = true
 }
