@@ -17,10 +17,12 @@ This module was originally design for this article (in French) : [link](https://
 
 ## Exemple
 
+You need to create a DNS zone before use this module.
+
 ```hcl
 module "site" {
   source  = "DamyrFr/static-site-stack/aws"
-  version = "2.0.4"
+  version = "2.0.5"
 	domain  = "yourdomain"
 	zone_id = "yourIDforRoute53zone"
 }
