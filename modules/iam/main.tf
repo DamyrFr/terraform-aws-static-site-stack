@@ -43,6 +43,7 @@ resource "aws_iam_user_policy" "s3" {
             "Effect": "Allow",
             "Action": [
                 "s3:PutObject",
+                "s3:DeleteObject",
                 "s3:PutObjectTagging"
             ],
             "Resource": "${var.bucket_arn}/*"
